@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Update Company Details</title>
+</head>
+
+    <body>
+        <div class="container">
+            <h2>Update Cost</h2>
+            <form method="post" action="/cost/edit/{{cost.v_id}}">
+                <label for="battery">Battery Cost:</label>
+                <input type="text" name="battery" value="{{cost.battery}}" required>
+
+                <label for="rd">RD Cost:</label>
+                <input type="text" name="rd" value="{{cost.rd}}" required>
+
+                <label for="body">Body Cost:</label>
+                <input type="text" name="body" value="{{cost.body}}" required>
+
+                <label for="subsidy">Subsidy:</label>
+                <input type="text" name="subsidy" value="{{cost.subsidy}}" required>
+
+                <button type="submit">Update Cost</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Electric Vehicle Management System</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Companies List</h2>
+        <ul>
+            {% for company in companies %}
+                <li>
+                    <table>
+                        <tr>
+                            <th>Company Details</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>{{ company.comp_name }}</strong><br>
+                                HQ: {{ company.comp_hq }}<br>
+                                Head: {{ company.comp_head }}<br>
+                                Employees: {{ company.no_of_emp }}<br>
+                                Models: {{ company.models }}<br>
+                                {% if company.vehicles %}
+                                    <strong>Vehicles:</strong><br>
+                                    {% for vehicle in company.vehicles %}
+                                        - {{ vehicle.v_name }} (Max Range: {{ vehicle.max_range }} km)<br>
+                                    {% endfor %}
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{{ url_for('company_edit', comp_id=company.comp_id) }}">Edit</a>
+                                <a href="{{ url_for('company_delete', comp_id=company.comp_id) }}">Delete</a>
+                                <a href="{{ url_for('service', comp_id=company.comp_id) }}">View Service</a>
+                                <a href="{{ url_for('station', comp_id=company.comp_id) }}">View Stations</a>
+                                <a href="{{ url_for('vehicle', comp_id=company.comp_id) }}">View Vehicles</a>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            {% endfor %}
+        </ul>
+
+
+
+        
+        <!--a href="/company/create">Add Company</a-->
+    </div>
+</body>
+</html>
+
+<!-- <h2>Companies List</h2>
+        <ul>
+            <li
+                <table>
+                    <tr>
+                        <th>Company Details</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        
+                    </tr>
+                </table>
+            </li>
+           Repeat the above li for each set of data -->
+        <!-- </ul> --> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <title>Cost Display</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Cost Display</h2>
+      <table>
+        <tr>
+          <th>v_id</th>
+          <th>v_name</th>
+          <th>battery</th>
+          <th>rd</th>
+          <th>body</th>
+          <th>subsidy</th>
+          <th>total</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <!-- add cost data from server-->
+
+          <td>{{cost.v_id}}</td>
+          <td>{{cost.v_name}}</td>
+          <td>{{cost.battery}}</td>
+          <td>{{cost.rd}}</td>
+          <td>{{cost.body}}</td>
+          <td>{{cost.subsidy}}</td>
+          <td>{{cost.total}}</td>
+
+          <!-- add links for edit delete and add new cost-->
+          <td>
+            <a href="{{ url_for('cost_edit', v_id=cost.v_id) }}">Edit</a>
+            <a href="{{ url_for('cost_delete', v_id=cost.v_id) }}">Delete</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

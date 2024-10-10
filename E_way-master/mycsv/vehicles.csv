@@ -1,0 +1,6 @@
+v_id,comp_id,v_name,max_range,cost,max_speed,hours,voltage,station_id
+1,101,"Tesla Model S",400,80000,155,8,400,3
+2,101,"Nissan Leaf",150,35000,89,5,300,5
+3,103,"Chevrolet Bolt",250,40000,91,7,350,2
+4,104,"Ford Mustang Mach-E",300,55000,120,6,400,4
+5,105,"Audi e-tron",220,65000,124,7,350,1

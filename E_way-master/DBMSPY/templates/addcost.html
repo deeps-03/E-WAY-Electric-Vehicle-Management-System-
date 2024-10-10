@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Add New Cost</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Cost</h2>
+        <form method="post" action="">
+            <input type="hidden" name="v_id" value="">
+            <label for="battery">Battery Cost:</label>
+            <input type="number" name="battery" required step="0.01">
+            <br>
+            <label for="rd">Research and Development Cost:</label>
+            <input type="number" name="rd" required step="0.01">
+            <br>
+            <label for="body">Body Cost:</label>
+            <input type="number" name="body" required step="0.01">
+            <br>
+            <label for="subsidy">Subsidy:</label>
+            <input type="number" name="subsidy" required step="0.01">
+            <br>
+            <button type="submit">Add Cost</button>
+        </form>
+    </div>
+</body>
+</html>

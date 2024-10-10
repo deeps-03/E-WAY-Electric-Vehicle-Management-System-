@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Service Details</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Service Details</h2>
+    <table>
+        <tr>
+            <th>comp_id</th>
+            <th>v_id</th>
+            <th>total_complaints</th>
+            <th>total_comp_solved</th>
+            <th>ratings</th>
+        </tr>
+        {% for service in services %}
+        <tr>
+            <td>{{ service.comp_id }}</td>
+            <td>{{ service.v_id }}</td>
+            <td>{{ service.total_complaints }}</td>
+            <td>{{ service.total_comp_solved }}</td>
+            <td>{{ service.ratings }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

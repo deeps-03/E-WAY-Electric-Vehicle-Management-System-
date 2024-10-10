@@ -1,0 +1,6 @@
+station_id,comp_id,location,no_of_units,cost,max_limit
+1,101,"Station A",50,12000.00,100
+2,102,"Station B",40,10000.50,80
+3,103,"Station C",30,8000.75,60
+4,104,"Station D",45,11000.25,90
+5,105,"Station E",35,9000.80,70

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Update Company Details</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Update Company Details</h2>
+        <form method="post" action="/company/edit/{{company.comp_id}}">
+            <label for="comp_name">Company Name:</label>
+            <input type="text" name="comp_name" value="{{company.comp_name}}" required>
+
+            <label for="comp_hq">Headquarters:</label>
+            <input type="text" name="comp_hq" value="{{company.comp_hq}}" required>
+
+            <label for="comp_head">Company Head:</label>
+            <input type="text" name="comp_head" value="{{company.comp_head}}" required>
+
+            <label for="no_of_emp">Number of Employees:</label>
+            <input type="number" name="no_of_emp" value="{{company.no_of_emp}}" required>
+
+            <label for="models">Number of Models:</label>
+            <input type="number" name="models" value="{{company.models}}" required>
+
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>

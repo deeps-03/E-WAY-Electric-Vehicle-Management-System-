@@ -1,0 +1,3 @@
+user_id,name,email,password,role
+1,Deepak Suresh,deepaksuresh698@gmail.com,2003,admin
+2,user1,user1@gmail.com,user1,user

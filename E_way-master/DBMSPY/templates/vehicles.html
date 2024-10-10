@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Update Company Details</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Vehicle Display</h2>
+        <table>
+            <tr>
+                <th>v_id</th>
+                <th>comp_id</th>
+                <th>v_name</th>
+                <th>max_range</th>
+                <th>cost</th>
+                <th>max_speed</th>
+                <th>station_id</th>
+                <th>Action</th>
+            </tr>
+           {%for vehicle in vehicles%}
+            <tr>
+                <td>{{vehicle.v_id}}</td>
+                <td>{{vehicle.comp_id}}</td>
+                <td>{{vehicle.v_name}}</td>
+                <td>{{vehicle.max_range}}</td>
+                <td>{{vehicle.cost}}</td>
+                <td>{{vehicle.max_speed}}</td>
+                <td>{{vehicle.station_id}}</td>
+                <td><a href="{{ url_for('cost', v_id=vehicle.v_id) }}">View Cost</a></td>
+            </tr>
+            {%endfor%}
+               
+          
+        </table>
+    </div>
+</body>
+</html>
